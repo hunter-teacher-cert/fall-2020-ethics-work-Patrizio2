@@ -69,38 +69,20 @@ for x in range(0, podsize):
     print (passengers[x].name , passengers[x].priority)
 
 
-GWCCount = 0
-GroupCount = 0
-SoloCount = 0
-UnaCount = 0
-
-### GroupwithChildren = []
-### Group =[]
-### Solo = []
-### Unaccompanied = []
-
-
-print (len(passengers))
-
 for x in range(len(passengers)):
     print(x)
     if passengers[x].priority < 1000000:
         Solo.append(passengers[x]) 
- #       Solo[SoloCount] = passengers[x]
-        SoloCount = SoloCount + 1
-        
+       
     elif passengers[x].priority < 2000000:
-        Unaccompanied[UnaCount] = passengers[x]
-        UnaCount = UnaCount + 1
-        
+        Unaccompanied.append(passengers[x])
+  
     elif passengers[x].priority < 3000000:
-        Group[GroupCount] = passengers[x]
-        Group = Group + 1
-        
+        Group.append(passengers[x])
+              
     else: 
         GroupwithChildren.append(passengers[x])
-        GWCCount = GWCCount + 1
-    
+           
 for x in range(0,len(GroupwithChildren)):
     print (GroupwithChildren[x].name,GroupwithChildren[x].priority)
     
