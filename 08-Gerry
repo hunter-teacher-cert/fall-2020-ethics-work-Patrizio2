@@ -179,7 +179,7 @@ for x in range (100):
             Good_maps.append(Temp_State)
             Success = Success + 1
           
-            print("This is the map")
+            print("\n\n\n\nThis is the map")
             for r in range(6):
                 print("")
                 count = r*3
